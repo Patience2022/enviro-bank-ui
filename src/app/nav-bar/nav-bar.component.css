@@ -1,0 +1,20 @@
+.example-spacer{
+  flex: 1 1 auto;
+}
+mat-toolbar{
+  background-color:#03A9F4
+}
+.in{
+  background-color: white;
+  font-size: small;
+  font-weight: bold;
+}
+h3{
+  font-weight: bold;
+}
+.header{
+  font-weight: bold;
+}
+.body{
+  background-color: #F3F3F3;
+}

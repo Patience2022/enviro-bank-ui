@@ -1,0 +1,12 @@
+
+p, .header{
+  display: block;
+  font-weight: bold;
+  margin: 10px 20px;
+}
+.data{
+  margin-left: 15px;
+}
+.accounts{
+  font-weight: bold;
+}

@@ -1,0 +1,53 @@
+<app-nav-bar></app-nav-bar>
+<body>
+<mat-card>
+  <form class="example-form" [formGroup]="registrationForm" (ngSubmit)="proceedToRegistration()">
+    <mat-card-header>
+      <mat-card-title>Register Client</mat-card-title>
+    </mat-card-header>
+  <mat-card-content>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>First Name</mat-label>
+    <input matInput placeholder="Enter first name" formControlName="firstName">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Last Name</mat-label>
+    <input matInput placeholder="Enter surname" formControlName="lastName">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Identity number</mat-label>
+    <input matInput placeholder="Enter identity number" formControlName="identityNumber">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Phone number</mat-label>
+    <input matInput placeholder="Enter phone number" formControlName="phoneNumber">
+  </mat-form-field>
+
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Email Address</mat-label>
+    <input matInput placeholder="Enter email address" formControlName="email" type="email">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Username</mat-label>
+    <input matInput placeholder="Enter userName" formControlName="userName">
+  </mat-form-field>
+
+<div>
+  <mat-radio-group aria-label="Select an option" formControlName="userRolesName">
+    <mat-radio-button value="Customer" >Customer</mat-radio-button>
+  </mat-radio-group>
+</div>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-flat-button style="background-color: #03A9F4">Register</button>
+    <button mat-flat-button style="background-color: #03A9F4" (click)="back()"> Back </button>
+  </mat-card-actions>
+  </form>
+</mat-card>
+</body>

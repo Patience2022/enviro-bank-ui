@@ -1,0 +1,13 @@
+
+mat-card-actions > button{
+  justify-content: right;
+  margin-left: 20px;
+  align-items: center;
+  padding-right: 10px;
+/*  margin-left creating space between button and anchor tag by moving anchor tag*/
+}
+mat-form-field{
+  display: block;
+  position: relative;
+}
+

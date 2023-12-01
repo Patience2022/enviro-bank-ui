@@ -1,0 +1,34 @@
+<app-nav-bar></app-nav-bar>
+<body>
+
+<div class=container>
+
+    <mat-card>
+      <h3>Accounts</h3>
+      <hr>
+        <div class="cards" *ngFor="let account of accountPage?.content" [hidden]="transactionsDisplayed">
+            <mat-card-header class="header">
+                <mat-card-title><a (click)="getAccountTransactions(account.accountNumber)">{{account.accountType}}</a>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content><span class="label">Balance </span>  <span class="value"> {{account.balance | currency: "R "}}</span>
+                <span class="label" style="margin-left: 15px">Amount available </span>  <span class="value"> {{account.amountAvailable | currency: "R "}}</span>
+              <p style=" margin-left:250px ;" >{{account.accountType}}</p>
+          <div class="transactions">
+          </div>
+            </mat-card-content>
+              <mat-card-actions align="end">
+                <button mat-flat-button   class="btn" (click)="transfer(account.accountNumber)">Transfer
+                </button>
+                <button (click)="close()">close</button>
+              </mat-card-actions>
+        <hr>
+        </div>
+
+    </mat-card>
+</div>
+<app-transactions [transactions]="accountTransactions"></app-transactions>
+</body>
+<ng-template>
+
+</ng-template>

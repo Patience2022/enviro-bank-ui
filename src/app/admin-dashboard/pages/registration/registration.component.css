@@ -1,0 +1,15 @@
+mat-form-field{
+  display: block;
+  justify-content: center;
+}
+button{
+  margin-left: 15px;
+}
+.mat-subheading-1{
+  font-weight: bold;
+  padding-left: 15px;
+}
+mat-card{
+  margin: 20px 300px;
+  padding: 10px 15px;
+}

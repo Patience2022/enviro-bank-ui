@@ -1,0 +1,32 @@
+<app-nav-bar></app-nav-bar>
+<body>
+<main>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title><h4>Transfer</h4></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div>
+        <form class="example-form" [formGroup]="transferForm" >
+          <mat-form-field appearance="outline">
+            <mat-label>Recipient Account Number</mat-label>
+            <input matInput formControlName="toAccountNumber">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Transfer Amount</mat-label>
+            <input matInput formControlName="transferAmount">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Reference</mat-label>
+            <input matInput formControlName="reference">
+          </mat-form-field>
+          <mat-card-actions align="end">
+            <button mat-flat-button style="background-color: #03A9F4" (click)="transfer()">Transfer</button>
+            <button mat-flat-button style="background-color: #03A9F4" (click)="close()"> Cancel </button>
+          </mat-card-actions>
+        </form>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</main>
+</body>

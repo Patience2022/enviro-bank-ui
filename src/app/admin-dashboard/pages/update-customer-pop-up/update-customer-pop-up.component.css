@@ -1,0 +1,14 @@
+mat-form-field{
+  display: block;
+  justify-content: center;
+}
+a{
+  margin-left: 15px;
+}
+mat-card{
+  margin: 20px 100px;
+  padding: 10px 15px;
+}
+mat-card-actions{
+  align-content: end;
+}

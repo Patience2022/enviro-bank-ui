@@ -1,0 +1,12 @@
+
+  <mat-toolbar>
+   <h2>Enviro Bank</h2>
+      <span class="example-spacer"></span>
+      <button [matMenuTriggerFor]="profile" mat-icon-button class="in">{{initials}}</button>
+      <mat-menu #profile="matMenu">
+        <button mat-menu-item (click)="updateDetails()">Profile</button>
+        <button mat-menu-item routerLink="/update-password">Change Password</button>
+        <button mat-menu-item (click)=logOut()>Sign Out</button>
+      </mat-menu>
+  </mat-toolbar>
+

@@ -1,0 +1,59 @@
+<app-nav-bar></app-nav-bar>
+<body>
+
+  <mat-card>
+
+    <form class="example-form" [formGroup]="updateUserForm" (ngSubmit)="updateUser()">
+
+    <mat-card-title class="mat-subheading-2" [hidden]="customer">Update Client Details</mat-card-title>
+    <mat-card-title class="mat-subheading-2" [hidden]="admin">Update Personal Information</mat-card-title>
+    <mat-card-content>
+
+
+          <mat-form-field class="example-full-width">
+            <mat-label>User ID</mat-label>
+            <input matInput formControlName="id"   readonly>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>First Name</mat-label>
+            <input matInput  formControlName="firstName"  >
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Last Name</mat-label>
+            <input matInput  formControlName="lastName" >
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Identity number</mat-label>
+            <input matInput formControlName="identityNumber" readonly>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Phone number</mat-label>
+            <input matInput  formControlName="phoneNumber" >
+          </mat-form-field>
+
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Email Address</mat-label>
+            <input matInput  formControlName="email" type="email" >
+          </mat-form-field>
+
+        <div>
+          <mat-radio-group aria-label="Select status" formControlName="locked" [hidden]="hide">
+            <mat-radio-button  >Enabled</mat-radio-button>
+            <mat-radio-button  >Locked</mat-radio-button>
+          </mat-radio-group>
+        </div>
+
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-flat-button style="background-color: #03A9F4">Update</button>
+      <a routerLink="/customer-listing" mat-flat-button style="background-color: #03A9F4"> Back </a>
+    </mat-card-actions>
+    </form>
+  </mat-card>
+
+</body>
